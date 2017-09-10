@@ -186,11 +186,14 @@ def main():
         
     
     if foundlabel == True:
+        
         if len(addresses)>0:
+            print("Saving csv...")
             csvString  = "\n".join(addresses)
             fileName = "../" + labelName + "EmailAdresses.csv"       
             f = open(fileName, 'w')      
             f.write(csvString)
+            print("Done.")
         else:
             print("No emails found with label: '" +  labelName + "'")
     else:
